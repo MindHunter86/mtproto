@@ -31,6 +31,35 @@ func (e BaseTheme) String() string {
 
 func (e BaseTheme) CRC() uint32 { return uint32(e) }
 
+type InlineQueryPeerType uint32
+
+const (
+	InlineQueryPeerTypeBroadcast InlineQueryPeerType = 0x6334ee9a
+	InlineQueryPeerTypeChat      InlineQueryPeerType = 0xd766c50a
+	InlineQueryPeerTypeMegagroup InlineQueryPeerType = 0x5ec4be43
+	InlineQueryPeerTypePm        InlineQueryPeerType = 0x833c0fac
+	InlineQueryPeerTypeSameBotPm InlineQueryPeerType = 0x3081ed9d
+)
+
+func (e InlineQueryPeerType) String() string {
+	switch e {
+	case InlineQueryPeerType(0x6334ee9a):
+		return "inlineQueryPeerTypeBroadcast"
+	case InlineQueryPeerType(0xd766c50a):
+		return "inlineQueryPeerTypeChat"
+	case InlineQueryPeerType(0x5ec4be43):
+		return "inlineQueryPeerTypeMegagroup"
+	case InlineQueryPeerType(0x833c0fac):
+		return "inlineQueryPeerTypePM"
+	case InlineQueryPeerType(0x3081ed9d):
+		return "inlineQueryPeerTypeSameBotPM"
+	default:
+		return "<UNKNOWN InlineQueryPeerType>"
+	}
+}
+
+func (e InlineQueryPeerType) CRC() uint32 { return uint32(e) }
+
 type InputPrivacyKey uint32
 
 const (
@@ -132,6 +161,44 @@ func (e PrivacyKey) String() string {
 }
 
 func (e PrivacyKey) CRC() uint32 { return uint32(e) }
+
+type ReportReason uint32
+
+const (
+	InputReportReasonChildAbuse    ReportReason = 0xadf44ee3
+	InputReportReasonCopyright     ReportReason = 0x9b89f93a
+	InputReportReasonFake          ReportReason = 0xf5ddd6e7
+	InputReportReasonGeoIrrelevant ReportReason = 0xdbd4feed
+	InputReportReasonOther         ReportReason = 0xc1e4a2b1
+	InputReportReasonPornography   ReportReason = 0x2e59d922
+	InputReportReasonSpam          ReportReason = 0x58dbcab8
+	InputReportReasonViolence      ReportReason = 0x1e22c78d
+)
+
+func (e ReportReason) String() string {
+	switch e {
+	case ReportReason(0xadf44ee3):
+		return "inputReportReasonChildAbuse"
+	case ReportReason(0x9b89f93a):
+		return "inputReportReasonCopyright"
+	case ReportReason(0xf5ddd6e7):
+		return "inputReportReasonFake"
+	case ReportReason(0xdbd4feed):
+		return "inputReportReasonGeoIrrelevant"
+	case ReportReason(0xc1e4a2b1):
+		return "inputReportReasonOther"
+	case ReportReason(0x2e59d922):
+		return "inputReportReasonPornography"
+	case ReportReason(0x58dbcab8):
+		return "inputReportReasonSpam"
+	case ReportReason(0x1e22c78d):
+		return "inputReportReasonViolence"
+	default:
+		return "<UNKNOWN ReportReason>"
+	}
+}
+
+func (e ReportReason) CRC() uint32 { return uint32(e) }
 
 type SecureValueType uint32
 

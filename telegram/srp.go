@@ -15,7 +15,7 @@ func GetInputCheckPassword(password string, accountPassword *AccountPassword) (I
 	// У CurrentAlgo должен быть этот самый тип, с длинным названием алгоритма
 	// https://github.com/tdlib/td/blob/f9009cbc01e9c4c77d31120a61feb9c639c6aeda/td/telegram/AuthManager.cpp#L537
 	alg := accountPassword.CurrentAlgo
-	current, ok := alg.(*PasswordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow)
+	current, ok := alg.(*PasswordKdfAlgoSHA256SHA256Pbkdf2Hmacsha512Iter100000SHA256ModPow)
 	if !ok {
 		return nil, errors.New("invalid CurrentAlgo type")
 	}
