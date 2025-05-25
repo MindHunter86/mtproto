@@ -10,7 +10,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/xelaj/mtproto/internal/mtproto/objects"
+	"github.com/MindHunter86/mtproto/internal/mtproto/objects"
 )
 
 type ErrResponseCode struct {

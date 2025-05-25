@@ -1,4 +1,4 @@
-module github.com/xelaj/mtproto
+module github.com/MindHunter86/mtproto
 
 go 1.13
 

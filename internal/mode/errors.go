@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/pkg/errors"
-	"github.com/xelaj/mtproto/internal/encoding/tl"
+	"github.com/MindHunter86/mtproto/internal/encoding/tl"
 )
 
 var (
